@@ -1,0 +1,57 @@
+a.list-group-item {
+    height:auto;
+    min-height:220px;
+}
+a.list-group-item.active small {
+    color:#fff;
+}
+.stars {
+    margin:20px auto 1px;    
+}
+
+.container-beers-list{
+    background: rgba(0, 0, 0, 0.6);
+    color: white;   
+}
+
+.rating-box{
+    position: relative;
+}
+
+.rating{
+    position: absolute;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    bottom: 0;
+    right: 0;
+}
+
+.line {
+    border-top: 3px double white;
+}
+.subheader{
+    font-size: 40px;
+}
+.katalog img{
+    height: 150px;
+    width: 120px;
+    margin-left: 15px;
+    margin-top: 15px;
+}      
+.katalog button{
+    margin-bottom: .6em;
+}
+.katalog button:last-child{
+    margin-bottom: 0;
+}
+.card{
+    margin-bottom: 1rem;
+    background: rgba(0, 0, 0, 0.6);
+}
+.underSelect label{
+    margin-left: 117px;
+}
+.underSelect button{
+    margin-right: 130px;
+    
+}

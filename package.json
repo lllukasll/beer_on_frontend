@@ -1,0 +1,39 @@
+{
+  "name": "beer_on_frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@kenshooui/react-multi-select": "^1.0.53",
+    "bootstrap": "^4.0.0-alpha.6",
+    "google-maps-react": "^2.0.2",
+    "jwt-decode": "^2.2.0",
+    "nuka-carousel": "^4.2.1",
+    "react": "^16.3.1",
+    "react-bootstrap": "^0.32.1",
+    "react-datepicker": "^1.4.1",
+    "react-day-picker": "^7.1.9",
+    "react-dom": "^16.3.1",
+    "react-dropzone": "^4.2.9",
+    "react-multiselect-two-sides": "^0.13.1",
+    "react-places-autocomplete": "^7.1.1",
+    "react-redux": "^5.0.7",
+    "react-responsive-modal": "^3.0.1",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.4",
+    "react-select2": "^4.0.3",
+    "react-slick": "^0.23.1",
+    "react-star-rating-component": "^1.4.1",
+    "redux": "^3.7.2",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.2.0",
+    "save": "^2.3.2",
+    "select2": "^4.0.6-rc.1",
+    "validator": "^10.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

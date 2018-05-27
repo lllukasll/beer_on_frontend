@@ -1,0 +1,14 @@
+.karta-home{
+    width: 100%;
+    height: 600px;
+    background-image: url('/images/cardback.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.beer-home{
+    height: 450px;
+    width: 280px;
+}
+.opis-home{
+    font-size: 18px;
+}

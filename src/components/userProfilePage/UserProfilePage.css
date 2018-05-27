@@ -1,0 +1,56 @@
+.beer-profile{
+    height: 450px;
+    width: 280px;
+}
+.opis-profile{
+    font-size: 18px;
+}
+.content-profile .header-profile{
+    font-size: 100px;
+    margin: 40px 90px;
+}
+.editAvatar-profile{
+    height: 350px;
+    width: 350px;
+    margin-left: 130px;
+}
+.pictureButton-profile{
+    margin-left: 210px;
+    margin-top: 5px;
+}
+.pictureLabel-profile{
+    margin-top: 20px;
+    margin-left: 190px;
+}
+.adresPliku-profile{
+    margin-top: 20px;
+    margin-left: 115px;
+}
+.formularz-profile{
+    margin-top: 230px;
+    margin-right: 150px;
+}
+.formularz-profile input{
+    width: 400px;
+    margin-left: 100px;
+}
+.formularz-profile label{
+    font-size: 1.2rem;
+    margin-bottom: 2px;
+    margin-top: 10px;
+}
+.przyciski-profile button{
+    width: 300px;
+}
+.zapiszZmiany-profile, .zmianaHasla-profile{
+    margin-right: 50px;
+}
+.modal-body-profile .popup-profile input{
+    width: 400px;
+}
+.modal-body-profile .popup-profile label{
+    width: 800px;
+}
+.modal-body-profile .popup-profile .form{
+    margin-left: 200px;
+}

@@ -1,0 +1,30 @@
+body{
+    background-image: url('/images/background.jpg');
+    background-repeat: no-repeat;  
+    font-family: 'Boogaloo', cursive;    
+        
+}
+.container-register{
+    height: 700px;
+    width: 600px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;   
+    margin-top: 60px;
+}
+label{
+    font-size: 20px;
+}
+.formularz label{
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+.formularz input{
+    width: 300px;
+    height: 2.4rem;
+}
+.regulamin{
+    margin: .9rem 0;
+}
+.header{
+    font-size: 4.8rem;
+}

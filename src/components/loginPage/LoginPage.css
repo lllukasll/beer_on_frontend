@@ -1,0 +1,15 @@
+body{
+    background-image: url('/images/background.jpg');
+    background-repeat: no-repeat;  
+    font-family: 'Boogaloo', cursive;      
+}
+.container-login{
+    height: 650px;
+    width: 580px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;   
+    margin-top: 120px;
+}
+label{
+    font-size: 20px;
+}

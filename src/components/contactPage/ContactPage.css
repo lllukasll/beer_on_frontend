@@ -1,0 +1,16 @@
+.formularz-kontakt{
+    margin-right: 150px;
+}
+.formularz-kontakt label{
+    font-size: 1.4rem;
+
+}
+.formularz-kontakt textarea{
+    height: 200px;
+}
+.formularz-kontakt input{
+    height: 50px;
+}
+.wyslijButton-kontakt{
+    margin-left: 745px;
+}
