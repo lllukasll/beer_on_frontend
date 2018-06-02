@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import SideBar from '../common/sidebar/SideBar.js';
 import CarouselItem from './CarouselItem.js';
-
+import { NavigationBar } from '../common/navigationBar/NavigationBar.js';
 import { beerActions } from '../../actions';
 
 import './HomePage.css';
@@ -54,7 +54,8 @@ class HomePage extends React.Component {
       );
     }
 
-       return (
+       return (<div>
+        <NavigationBar />
         <div class="container-fluid mt-3">
           <div class="row">
             <SideBar />
@@ -88,6 +89,7 @@ class HomePage extends React.Component {
                 </div>
               </div>
           </div>
+        </div>
         </div>
      );
    }

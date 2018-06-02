@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import "./LoginPage.css";
-
+import { NavigationBar } from '../common/navigationBar/NavigationBar.js';
 import { userActions } from '../../actions';
 
 class LoginPage extends React.Component {
@@ -42,7 +42,8 @@ class LoginPage extends React.Component {
         const { loggingIn, error } = this.props;
         const { username, password, submitted } = this.state;
 
-        return (
+        return (<div>
+        <NavigationBar />
         <div class="container container-login d-flex justify-content-center p-4">
             <div class="mt-3 text-center">
                 <h1 class="display-4 mb-3">Witaj na stronie Beer-On</h1>      
@@ -72,7 +73,7 @@ class LoginPage extends React.Component {
                 </form>
             </div>    
         </div>
-        
+    </div>
         );
     }
 }

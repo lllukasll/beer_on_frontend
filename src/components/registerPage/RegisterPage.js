@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import FormValidator from '../../helpers/FormValidator.js';
-
+import { NavigationBar } from '../common/navigationBar/NavigationBar.js';
 import { userActions } from '../../actions';
 
 import "./RegisterPage.css";
@@ -186,6 +186,8 @@ class RegisterPage extends React.Component {
         const { registering, alert, error } = this.props;
 
         return (
+            <div>
+            <NavigationBar />
             <section class="rejestracja">
                 <div class="container container-register text-center p-3">
                     <h1 class="display-4 mt-2 header">Rejestracja</h1>
@@ -238,6 +240,7 @@ class RegisterPage extends React.Component {
                        
                 </div>
             </section>
+        </div>
         );
     }
 }

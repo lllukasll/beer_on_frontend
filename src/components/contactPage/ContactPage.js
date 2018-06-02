@@ -3,14 +3,44 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import './ContactPage.css';
 import SideBar from '../common/sidebar/SideBar.js';
+import { NavigationBar } from '../common/navigationBar/NavigationBar.js';
+import jwt_decode from 'jwt-decode';
 
 class ContactPage extends React.Component {
     constructor(props){
         super(props);
     }
+
+    componentDidMount(){
+        this.authHeader();
+    }
+
+    authHeader() {
+        let user = JSON.parse(localStorage.getItem('user'));
+
+        if(user && user.accessToken) {
+            var decoded = jwt_decode(user.accessToken);
+            console.log(decoded);
+
+            if(decoded.role === 'Admin')
+            {
+                console.log('User is admin')
+                return true
+            }
+                
+
+            return false;
+        } else {
+            return false;
+        }
+    }
+
     
     render() {
+        
         return (
+        <div>
+            <NavigationBar />
             <div class="container-fluid mt-3">
                 <div class="row">
                     <SideBar />
@@ -67,6 +97,7 @@ class ContactPage extends React.Component {
                     </div>
                 </div>
             </div>
+        </div>
         );
     }
 }

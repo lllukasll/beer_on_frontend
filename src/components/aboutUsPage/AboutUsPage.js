@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import SideBar from '../common/sidebar/SideBar.js';
+import { NavigationBar } from '../common/navigationBar/NavigationBar.js';
 
 class AboutUsPage extends React.Component {
     constructor(props){
@@ -9,6 +10,8 @@ class AboutUsPage extends React.Component {
     
     render() {
         return (
+        <div>
+            <NavigationBar />
             <div class="container-fluid mt-3">
                 <div class="row">
                     <SideBar />     
@@ -16,6 +19,7 @@ class AboutUsPage extends React.Component {
                     </div>
                 </div>
             </div>
+        </div>
         );
     }
 }

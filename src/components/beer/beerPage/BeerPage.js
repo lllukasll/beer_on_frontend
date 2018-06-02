@@ -8,7 +8,7 @@ import CommentsList from './CommentsList.js';
 import Rating from './Rating.js';
 import AddRating from './AddRating.js';
 import SideBar from '../../common/sidebar/SideBar.js';
-
+import { NavigationBar } from '../../common/navigationBar/NavigationBar.js';
 import "./BeerPage.css";
 
 class BeerPage extends React.Component {
@@ -16,7 +16,8 @@ class BeerPage extends React.Component {
         super(props);
 
         this.state = {
-            isLoading : true
+            isLoading : true,
+            admin: false
         }
     }
 
@@ -27,7 +28,7 @@ class BeerPage extends React.Component {
     }
 
     render() {
-        const { beer } = this.props;
+        const { beer, loggedUser } = this.props;
 
         if(this.state.isLoading) {
             return (
@@ -35,7 +36,14 @@ class BeerPage extends React.Component {
             );
         }
 
+        if(loggedUser && loggedUser.userIsAdmin && this.state.admin == false)
+        {
+            this.setState({admin: loggedUser.userIsAdmin})
+        }
+
         return (
+            <div>
+            <NavigationBar />
             <div class="container-fluid mt-3">
             <div class="row">
                 <SideBar />
@@ -56,6 +64,7 @@ class BeerPage extends React.Component {
                                     <label class="ml-3">01.01.2018</label>
                                     <br />
                                     <a href=""><button class="btn btn-outline-warning mt-3">Sprawdź dostępność</button></a>
+                                    <div>{this.state.admin && <button class="btn btn-outline-warning mt-3">Edytuj grupę</button>}</div>
                                 </div>  
                             </div>
                             <div class="col-md-6 mt-5 text-left">
@@ -85,15 +94,17 @@ class BeerPage extends React.Component {
                 </div>
             </div>
         </div>
+        </div>
         );
     }
 }
 
 
 function mapStateToProps(state, ownProps) {
-    const { beer } = state;
+    const { beer, loggedUser } = state;
     return {
         beer,
+        loggedUser,
         id: ownProps.match.params.id
     };
 }

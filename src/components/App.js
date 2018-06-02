@@ -12,6 +12,7 @@ import AboutUsPage from '../components/aboutUsPage/AboutUsPage.js';
 import ContactPage from '../components/contactPage/ContactPage.js';
 import UserBeersPage from '../components/beer/userBeersPage/UserBeersPage.js';
 import UserProfilePage from '../components/userProfilePage/UserProfilePage.js';
+import AdminPage from '../components/adminPage/AdminPage.js';
 
 import {history} from '../helpers'
 import {Router, Route} from 'react-router-dom';
@@ -19,12 +20,13 @@ import {Router, Route} from 'react-router-dom';
 class App extends React.Component {
   render() {
     return (
-      <div>
+        <div>
           <Router history={history}>
             <div>
-                <NavigationBar />
+              <Route path="/admin" component={AdminPage} />
+                
                 <div>
-                    <Route exact path="/" component={HomePage} />
+                    <Route exact path="/" component={HomePage}></Route>
                     <Route path="/login" component={LoginPage} />
                     <Route path="/register" component={RegisterPage} />
                     <Route path="/confirmEmail" component={ConfirmEmailPage} />
@@ -35,10 +37,11 @@ class App extends React.Component {
                     <Route path="/about" component={AboutUsPage} />
                     <Route path="/user/:id" component={UserProfilePage} />
                     <Route path="/userBeers" component={UserBeersPage} />
+                    
                 </div>
             </div>
           </Router>
-      </div>
+        </div>
     );
   }
 }

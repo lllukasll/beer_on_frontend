@@ -5,6 +5,7 @@ import { config } from '../../../helpers';
 import { beerActions } from '../../../actions';
 
 import SideBar from '../../common/sidebar/SideBar.js';
+import { NavigationBar } from '../../common/navigationBar/NavigationBar.js';
 import './UserBeersPage.css';
 
 class BeersListPage extends React.Component {
@@ -32,6 +33,8 @@ class BeersListPage extends React.Component {
         }
 
         return (
+        <div>
+            <NavigationBar />
             <div class="container-fluid mt-3">
                 <div class="row">
                     <SideBar />
@@ -84,6 +87,7 @@ class BeersListPage extends React.Component {
                     </div>
                 </div>
             </div>
+        </div>
         );
     }
 }

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { config } from '../../../helpers';
 import { beerActions } from '../../../actions';
-
+import { NavigationBar } from '../../common/navigationBar/NavigationBar.js';
 import SideBar from '../../common/sidebar/SideBar.js';
 import SortingOptions from './SortingOptions.js';
 import "./BeersListPage.css";
@@ -33,6 +33,8 @@ class BeersListPage extends React.Component {
         }
 
         return (
+    <div>
+        <NavigationBar />
         <div class="container-fluid mt-3">
             <div class="row">
                 <SideBar />
@@ -62,6 +64,9 @@ class BeersListPage extends React.Component {
                                 {beer.beers.map((beer,index) => 
                                     <div class="col col-md-3">    
                                         <div class="card">
+                                            <div style={{float: 'right', margin: 'auto 0 auto 90%', cursor: 'pointer'}} id="dropdownMenuButtonComment" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i className="fas fa-cog"></i>
+                                            </div>
                                             <img src={config.apiUrl + "/api/photo/" + beer.avatarUrl} class="card-img" />
                                             <div class="card-body d-flex flex-column">
                                                 <button type="button" class="btn btn-dark " aria-label="Left Align">
@@ -84,12 +89,7 @@ class BeersListPage extends React.Component {
                 </div>
             </div>
         </div>
-
-
-
-
-
-
+    </div>
         );
     }
 }

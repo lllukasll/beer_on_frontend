@@ -8,6 +8,7 @@ import UploadPhoto from './UploadPhoto.js';
 import BeerTypes from './BeerTypes.js';
 import Breweries from './Breweries.js';
 import SideBar from '../../common/sidebar/SideBar.js';
+import { NavigationBar } from '../../common/navigationBar/NavigationBar.js';
 
 class CreateBeerPage extends React.Component {
     constructor(props){
@@ -205,6 +206,8 @@ class CreateBeerPage extends React.Component {
         const {showBeerTypeInput, showBreweryInput} = this.state;
 
         return(
+            <div>
+            <NavigationBar />
             <div class="container-fluid mt-3">
             <div class="row">
                 <SideBar />
@@ -270,6 +273,7 @@ class CreateBeerPage extends React.Component {
                 </div>
             </div>
         </div>
+    </div>
         );
     }
 }

@@ -1,10 +1,28 @@
 import { userConstants } from '../constants';
+import jwt_decode from 'jwt-decode';
 
 const loggedUserInitialState = {
     loading: false,
     loadedUser: false,
     loggedUserData: [],
     error: []
+}
+
+function authHeader() {
+  let user = JSON.parse(localStorage.getItem('user'));
+
+  if(user && user.accessToken) {
+      var decoded = jwt_decode(user.accessToken);
+
+      if(decoded.role === 'Admin')
+      {
+          return true
+      }
+          
+      return false;
+  } else {
+      return false;
+  }
 }
 
 export function loggedUser(state = loggedUserInitialState, action) {
@@ -15,6 +33,7 @@ export function loggedUser(state = loggedUserInitialState, action) {
       };
     case userConstants.GETLOGGEDUSER_SUCCESS:
       return {
+        userIsAdmin: authHeader(),
         loadedUser: true,
         loggedUserData: action.user
       };

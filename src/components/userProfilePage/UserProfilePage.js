@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import SideBar from '../common/sidebar/SideBar.js';
+import { NavigationBar } from '../common/navigationBar/NavigationBar.js';
 import ChangePassword from './ChangePassword.js';
 import UserData from './UserData.js';
 import './UserProfilePage.css';
@@ -13,6 +14,8 @@ class UserProfilePage extends React.Component {
     
     render() {
         return (
+        <div>
+            <NavigationBar />
             <div class="container-fluid mt-3">
                 <div class="row">
                     <SideBar />
@@ -56,6 +59,7 @@ class UserProfilePage extends React.Component {
                         </div>
                 </div>
             </div>
+        </div>
         );
     }
 }

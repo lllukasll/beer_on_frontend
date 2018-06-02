@@ -16,19 +16,9 @@ class LoggedInContent extends React.Component {
   componentDidMount() {
     this.setState({isLoading: true});
     this.props.dispatch(userActions.getLoggedUser());
-    this.getRole();
     this.setState({isLoading:false});
   }
 
-  getRole(){
-    let user = JSON.parse(localStorage.getItem('user'));
-
-    if(user && user.accessToken) {
-      var token = user.accessToken;
-      var decoded = jwt_decode(token);
-      console.log(decoded)
-    }
-  }
 
   render() {
     const { loggedUser } = this.props;
